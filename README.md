@@ -36,6 +36,13 @@ chmod +x 04_test_folding_pipeline.sh
 ./04_test_folding_pipeline.sh
 ```
 
+### 5. Visualize Results
+Generate a graph of the potential energy minimization.
+```bash
+chmod +x 05_visualise_data.sh
+./05_visualise_data.sh
+```
+
 ## Maintenance
 Run the maintenance script to verify your driver, CUDA, and GROMACS versions are correctly detected.
 ```bash
