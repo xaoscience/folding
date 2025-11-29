@@ -5,7 +5,8 @@ cd "$(dirname "$0")"
 # --- CONFIGURATION ---
 REPO_URL="https://github.com/gromacs/gromacs.git"
 GMX_VERSION="v2026-beta" 
-INSTALL_PREFIX="/usr/local/gromacs"
+# Standardize on a local installation within the project folder
+INSTALL_PREFIX="$(pwd)/install"
 BUILD_DIR="build"
 
 echo "--- [1/4] Preparing GROMACS Source (Submodule) ---"
@@ -37,7 +38,8 @@ echo "--- [3/4] Compiling (This will take time) ---"
 make -j$(nproc)
 
 echo "--- [4/4] Installing to $INSTALL_PREFIX ---"
-sudo make install
+make install
 
 echo "--- Installation Complete ---"
-echo "To use GROMACS, run: source $INSTALL_PREFIX/bin/GMXRC"
+echo "To use GROMACS, run:"
+echo "  source $INSTALL_PREFIX/bin/GMXRC"

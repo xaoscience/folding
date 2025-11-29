@@ -28,8 +28,10 @@ fi
 echo -n "GROMACS:       "
 # Check if GMX is in path, if not try to source it temporarily to check
 if ! command -v gmx &> /dev/null; then
-    if [ -f "/usr/local/gromacs/bin/GMXRC" ]; then
-        source /usr/local/gromacs/bin/GMXRC
+    # Check standardized local install
+    LOCAL_GMXRC="$(dirname "$0")/install/bin/GMXRC"
+    if [ -f "$LOCAL_GMXRC" ]; then
+        source "$LOCAL_GMXRC"
     fi
 fi
 

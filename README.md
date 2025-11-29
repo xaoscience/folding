@@ -17,7 +17,7 @@ chmod +x 01_setup_dependencies.sh
 ```
 
 ### 2. Install GROMACS (Source Compile)
-Clones the official repository, configures for CUDA, and installs to `/usr/local/gromacs`.
+Clones the official repository, configures for CUDA, and installs locally to `./install`.
 ```bash
 chmod +x 02_install_gromacs.sh
 ./02_install_gromacs.sh
@@ -26,7 +26,14 @@ chmod +x 02_install_gromacs.sh
 ### 3. Activate Environment
 Add this to your `.bashrc` or run before working:
 ```bash
-source /usr/local/gromacs/bin/GMXRC
+source ./install/bin/GMXRC
+```
+
+### 4. Test the Pipeline
+Run the automated test script to fold Lysozyme (1AKI) and verify CUDA acceleration.
+```bash
+chmod +x 04_test_folding_pipeline.sh
+./04_test_folding_pipeline.sh
 ```
 
 ## Maintenance
