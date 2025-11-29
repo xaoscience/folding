@@ -1,0 +1,19 @@
+# Build artifacts
+build/
+
+# Simulation Data & Outputs
+*.gro
+*.tpr
+*.xtc
+*.trr
+*.edr
+*.xvg
+*.log
+*.cpt
+*.png
+*.fasta
+
+# Temporary/System files
+.DS_Store
+*~
+*.swp
