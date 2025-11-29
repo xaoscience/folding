@@ -37,11 +37,13 @@ chmod +x 04_test_folding_pipeline.sh
 ```
 
 ### 5. Visualize Results
-Generate a graph of the potential energy minimization.
+Generate a graph of the potential energy minimization and launch the 3D web viewer.
 ```bash
 chmod +x 05_visualise_data.sh
 ./05_visualise_data.sh
 ```
+https://xaoscience.github.io/folding/test_lysozyme.html
+![3D Web Visualisation Example](test_lysozyme/3D_web_visualisation_example.png)
 
 ## Maintenance
 Run the maintenance script to verify your driver, CUDA, and GROMACS versions are correctly detected.
