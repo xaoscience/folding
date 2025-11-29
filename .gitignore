@@ -2,7 +2,7 @@
 build/
 install/
 
-# Simulation Data & Outputs
+# GROMACS / Simulation Data (Global Ignore)
 *.gro
 *.tpr
 *.xtc
@@ -11,10 +11,21 @@ install/
 *.xvg
 *.log
 *.cpt
-*.png
+*.dat
+*.mdp
+*.top
+*.itp
+*.pdb
 *.fasta
 
 # Temporary/System files
 .DS_Store
 *~
 *.swp
+\#*#
+
+# Experiment & Test Directories
+
+test_*/*
+experiment_*/*
+!*.png
