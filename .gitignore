@@ -29,3 +29,4 @@ install/
 test_*/*
 experiment_*/*
 !*.png
+!*.html
