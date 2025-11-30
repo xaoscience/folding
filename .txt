@@ -1,0 +1,9 @@
+-m "docs: small edits + feat: add variant generation & screening + m9e: script edits" -m "- Clarified and simplified docs
+- Added 06_generate_variants (Mode 1. Stable peptide fragment scanning, 2. Alanine scanning to test for critical residues,  3. Generate clones for dummy test)
+- Added 07_screen_variants (Runs full simulation on candidates/ to determine stability)
+- Increase script verbosity, consistency & deleted comment"
+
+git commit -m "feat: add high-throughput variant screening pipeline" -m "- Add '06_generate_variants.sh': Implements fragment-based stability screening and alanine scanning mutagenesis.
+- Add '07_screen_variants.sh': Automates molecular dynamics pipeline for batch candidate evaluation.
+- chore: standardize script verbosity and directory handling (using pushd/popd for robustness).
+- docs: clarify usage instructions for the discovery loop."

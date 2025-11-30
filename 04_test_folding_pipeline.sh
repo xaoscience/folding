@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+set -xe
 
 # --- CONFIGURATION ---
 PROJECT_DIR="test_lysozyme"
