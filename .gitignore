@@ -27,6 +27,8 @@ install/
 # Experiment & Test Directories
 
 test_*/*
-experiment_*/*
+experiment_*
+experiments
+screening_runs
 !*.png
 !*.html

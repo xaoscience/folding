@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+set -xe
 
 echo "--- [1/2] Updating Apt Repositories ---"
 sudo apt update

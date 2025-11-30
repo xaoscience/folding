@@ -1,7 +1,6 @@
 #!/bin/bash
-set -e
+set -xe
 
-# Colors
 GREEN='\033[0;32m'
 CYAN='\033[0;36m'
 NC='\033[0m'
@@ -48,7 +47,7 @@ grep -v "^[#@]" energy.xvg > clean_energy.dat
 echo -e "${CYAN}--- Generating Graph (Gnuplot) ---${NC}"
 gnuplot <<- EOF
     set terminal pngcairo size 800,600 enhanced font 'Verdana,10'
-    set output 'energy_minimization.png'
+    set output 'energy_minimisation.png'
     # Escape underscores in the title to prevent subscript formatting
     set title "Potential Energy Minimization (${PROJECT_DIR//_/\\\\_})"
     set xlabel "Time (ps)"
@@ -59,11 +58,11 @@ gnuplot <<- EOF
 EOF
 
 echo -e "${GREEN}--- Success! ---${NC}"
-echo "Graph saved to: $(pwd)/energy_minimization.png"
+echo "Graph saved to: $(pwd)/energy_minimisation.png"
 
 # Optional: Try to open it if on a desktop environment
 if command -v xdg-open &> /dev/null; then
-    xdg-open energy_minimization.png
+    xdg-open energy_minimisation.png
 fi
 
 # 5. 3D Visualization (Web Viewer)
