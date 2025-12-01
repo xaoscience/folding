@@ -115,6 +115,14 @@ for pdb_file in "$CANDIDATES_DIR"/*.pdb; do
     
     echo -e "${CYAN}[$count/$total] Processing variant: $variant_name${NC}"
     
+    # Check if already processed
+    if [ -f "$run_dir/energy.xvg" ]; then
+        echo "  > Skipping (already processed)."
+        energy_val=$(grep -v "^[#@]" "$run_dir/energy.xvg" | tail -n 1 | awk '{print $2}')
+        echo "$variant_name,$energy_val" >> "$REPORT_FILE"
+        continue
+    fi
+
     # Setup directory
     if [ -d "$run_dir" ]; then rm -rf "$run_dir"; fi
     mkdir -p "$run_dir"
