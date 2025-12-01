@@ -53,8 +53,8 @@ https://xaoscience.github.io/folding/test_lysozyme.html
 Generate and screen novel protein variants (fragments, mutants, or clones).
 
 **Step 1: Generate Variants**
-Creates a batch of PDB files. Groups by protein name (e.g., `experiments/1AKI/`).
-- Default: Appends to the latest experiment folder for that protein/mode.
+Creates a batch of PDB files.
+- **Default:** Appends to the latest experiment folder for that protein (e.g., `experiments/1AKI/2025.11.30_...`).
 - `--new`: Forces a new timestamped experiment folder.
 ```bash
 ./06*
@@ -65,6 +65,7 @@ Creates a batch of PDB files. Groups by protein name (e.g., `experiments/1AKI/`)
 **Step 2: Screen Variants**
 Runs the GROMACS pipeline on the generated variants and ranks them by potential energy.
 - Auto-detects the latest experiment if no argument is provided.
+- Skips already processed variants (incremental screening).
 ```bash
 ./07* [experiment_dir]
 ```
