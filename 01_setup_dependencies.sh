@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 set -xe
 
 echo "--- [1/2] Updating Apt Repositories ---"
